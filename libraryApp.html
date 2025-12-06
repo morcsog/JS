@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library App</title>
+</head>
+<body>
+    <!-- 
+    Title (text), Author(text), Tags(Checkbox), ISBN(Unique, text, max 13)
+    Add all these,
+    Search -> Text, search engine (script), Display    
+    -->
+    <form id="addBookForm">        
+        <fieldset>
+            <legend>Fill out everything you know about your book</legend>
+            <label for="Title">Title</label>
+            <input type="text" name="Title" id="title">
+            <label for="Author">Author</label>
+            <input type="text" name="Author" id="author"><br>
+            <label for="ISBN">ISBN</label>
+            <input type="text" name="ISBN" id="isbn" minlength="10" maxlength="13"><br>
+        </fieldset>        
+        <fieldset name="Tags">
+            <legend>Choose Tags for your book</legend>
+            <label for="Romance">Romance</label>
+            <input type="checkbox" name="tag" id="romance" value="Romance"><br>
+            <label for="Crime">Crime</label>
+            <input type="checkbox" name="tag" id="crime" value="Crime"><br>
+            <label for="Fantasy">Fantasy</label>  
+            <input type="checkbox" name="tag" id="fantasy" value="Fantays"><br>
+            <label for="SciFi">Sci-Fi</label>
+            <input type="checkbox" name="tag" id="scifi" value="Sci-Fi"><br>
+            <label for="Drama">Drama</label>
+            <input type="checkbox" name="tag" id="drama" value="Drama"><br> 
+        </fieldset>
+        <button type="submit">Add book</button>
+    </form>
+    <button type="button" id="test">Test</button>
+
+    <fieldset>
+        <legend>Search box</legend>
+        <label for="AuthorSearch">Enter the Author's name:</label>
+        <input type="text" name="AuthorSearch" id="authorSearch">
+        <button type="button" id="searchBtn">Search</button>
+    </fieldset>
+    <table id="booksTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody id="resultsTable"></tbody>
+    </table>
+</body>
+<script src="libraryScript.js"></script>
+</html>
