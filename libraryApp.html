@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Library App</title>
 </head>
 <body>
@@ -12,29 +13,45 @@
     Search -> Text, search engine (script), Display    
     -->
     <form id="addBookForm">        
-        <fieldset>
+        <fieldset class="inputs">
             <legend>Fill out everything you know about your book</legend>
-            <label for="Title">Title</label>
-            <input type="text" name="Title" id="title">
-            <label for="Author">Author</label>
-            <input type="text" name="Author" id="author"><br>
-            <label for="ISBN">ISBN</label>
-            <input type="text" name="ISBN" id="isbn" minlength="10" maxlength="13"><br>
+            <div class="field">
+                <label for="Title">Title</label>
+                <input type="text" name="Title" id="title">
+            </div>
+            <div class="field">
+                <label for="Author">Author</label>
+                <input type="text" name="Author" id="author">
+            </div>
+            <div class="field">
+                <label for="ISBN">ISBN</label>
+                <input type="text" name="ISBN" id="isbn" minlength="10" maxlength="13">
+            </div>
         </fieldset>        
         <fieldset name="Tags">
             <legend>Choose Tags for your book</legend>
-            <label for="Romance">Romance</label>
-            <input type="checkbox" name="tag" id="romance" value="Romance"><br>
-            <label for="Crime">Crime</label>
-            <input type="checkbox" name="tag" id="crime" value="Crime"><br>
-            <label for="Fantasy">Fantasy</label>  
-            <input type="checkbox" name="tag" id="fantasy" value="Fantays"><br>
-            <label for="SciFi">Sci-Fi</label>
-            <input type="checkbox" name="tag" id="scifi" value="Sci-Fi"><br>
-            <label for="Drama">Drama</label>
-            <input type="checkbox" name="tag" id="drama" value="Drama"><br> 
-        </fieldset>
-        <button type="submit">Add book</button>
+            <div class="checkbox">
+                <label for="Romance">Romance</label>
+                <input type="checkbox" name="tag" id="romance" value="Romance" class="check_box"><br>
+            </div>
+            <div class="checkbox">
+                <label for="Crime">Crime</label>
+                <input type="checkbox" name="tag" id="crime" value="Crime" class="check_box">
+            </div>
+            <div class="checkbox">
+                <label for="Fantasy">Fantasy</label>  
+                <input type="checkbox" name="tag" id="fantasy" value="Fantays" class="check_box">
+            </div>
+            <div class="checkbox">
+                <label for="SciFi">Sci-Fi</label>
+                <input type="checkbox" name="tag" id="scifi" value="Sci-Fi" class="check_box">
+            </div>
+            <div class="checkbox">
+                <label for="Drama">Drama</label>
+                <input type="checkbox" name="tag" id="drama" value="Drama" class="check_box">
+            </div>
+            <button type="submit">Add book</button>
+        </fieldset>        
     </form>
     <button type="button" id="test">Test</button>
 
